@@ -32,8 +32,8 @@ has_many :users,through: :user_groups
 |id|integer|null:false,foreign_key: true|
 |text|string|null: false|
 |image|string|
-|user_id|integer|
-|group_id|integer|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
 ### Association
   belong_to :user
 
