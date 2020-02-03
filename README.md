@@ -42,7 +42,7 @@ has_many :users,through: :user_groups
 ## user_groupsテーブル
 |Cloumn|Type|Options|
 |------|----|-------|
-|id|integer|null:false|
+|id|integer|null:false,foreign_key: true|
 |user_id|integer|
 |group_id|integer|
 ### Association
