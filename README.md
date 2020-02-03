@@ -43,8 +43,8 @@ has_many :users,through: :user_groups
 |Cloumn|Type|Options|
 |------|----|-------|
 |id|integer|null:false,foreign_key: true|
-|user_id|integer|
-|group_id|integer|
+|user_id|integer|null: false,foreign_key: true|
+|group_id|integer|null: false,foreign_key: true|
 ### Association
   belong_to :user
 
