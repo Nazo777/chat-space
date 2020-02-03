@@ -9,6 +9,7 @@
 |password|string|null: false|
 ### Association
   has_many :messages
+  
   has_many :groups,through: :user_groups
 
 ## groupsテーブル
@@ -18,6 +19,7 @@
 |group_name|string|null: false|
 ### Association
 has_many :messages
+
 has_many :users,through: :user_groups
 
 ## messagesテーブル
@@ -30,6 +32,7 @@ has_many :users,through: :user_groups
 |group_id|integer|
 ### Association
   belong_to :user
+
   belong_to :group
 
 ## user_groupsテーブル
@@ -40,4 +43,5 @@ has_many :users,through: :user_groups
 |group_id|integer|
 ### Association
   belong_to :user
+
   belong_to :group
