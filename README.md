@@ -30,7 +30,7 @@ has_many :users,through: :user_groups
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null:false,foreign_key: true|
-|text|string|
+|text|string|null: false|
 |image|string|
 |user_id|integer|
 |group_id|integer|
