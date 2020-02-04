@@ -38,8 +38,8 @@ has_many :users,through: :user_groups
 |Cloumn|Type|Options|
 |------|----|-------|
 |id|integer|null:false,foreign_key: true|
-|user_id|integer|null: false,foreign_key: true|
-|group_id|integer|null: false,foreign_key: true|
+|user|references|null: false,foreign_key: true|
+|group|references|null: false,foreign_key: true|
 ### Association
   belong_to :user
   belong_to :group
