@@ -9,9 +9,7 @@
 |password|string|null: false|
 ### Association
   has_many :messages
-  
   has_many :user_groups
-
   has_many :groups,through: :user_groups
 
 ## groupsテーブル
@@ -21,9 +19,7 @@
 |name|string|null: false|
 ### Association
 has_many :messages
-
 has_many :user_groups
-
 has_many :users,through: :user_groups
 
 ## messagesテーブル
@@ -36,7 +32,6 @@ has_many :users,through: :user_groups
 |group_id|integer|null: false,foreign_key: true|
 ### Association
   belong_to :user
-
   belong_to :group
 
 ## user_groupsテーブル
@@ -47,5 +42,4 @@ has_many :users,through: :user_groups
 |group_id|integer|null: false,foreign_key: true|
 ### Association
   belong_to :user
-
   belong_to :group
