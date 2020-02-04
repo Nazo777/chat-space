@@ -26,7 +26,7 @@ has_many :users,through: :user_groups
 |Column|Type|Options|
 |------|----|-------|
 |id|integer|null:false,foreign_key: true|
-|text|string|null: false|
+|text|string|
 |image|string|
 |user_id|integer|null: false,foreign_key: true|
 |group_id|integer|null: false,foreign_key: true|
