@@ -28,8 +28,8 @@ has_many :users,through: :user_groups
 |id|integer|null:false,foreign_key: true|
 |text|string|
 |image|string|
-|user_id|integer|null: false,foreign_key: true|
-|group_id|integer|null: false,foreign_key: true|
+|user|references|null: false,foreign_key: true|
+|group|references|null: false,foreign_key: true|
 ### Association
   belong_to :user
   belong_to :group
