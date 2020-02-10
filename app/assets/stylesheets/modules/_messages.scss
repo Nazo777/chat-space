@@ -34,7 +34,10 @@
   .side-groups{
     padding:20px 20px 0;
     .side-group{
+      color:$mainWhite;
       margin-bottom:40px;
+      text-decoration: none;
+      display:block;
       &__name{
         font-size:15px;
         margin-bottom:5px;
@@ -129,6 +132,7 @@
             position:absolute;
             top:10px;
             right:10px;
+            cursor:pointer;
             .file{
               display:none;
             }
@@ -142,6 +146,7 @@
         height:50px;
         margin-left:15px;
         padding:0 30px;
+        cursor:pointer;
       }
     }
   }
