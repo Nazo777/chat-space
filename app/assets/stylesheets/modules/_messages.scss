@@ -34,10 +34,12 @@
   .side-groups{
     padding:20px 20px 0;
     .side-group{
-      color:$mainWhite;
       margin-bottom:40px;
-      text-decoration: none;
       display:block;
+      a{
+        color:$mainWhite;
+        text-decoration: none;
+      }
       &__name{
         font-size:15px;
         margin-bottom:5px;
