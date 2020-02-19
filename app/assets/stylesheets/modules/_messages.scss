@@ -71,6 +71,10 @@
       &__member{
         color:#999999;
         font-size:12px;
+        .li-name{
+          margin-right:5px;
+          float:left;
+        }
       }
     }
     &__edit-btn{
