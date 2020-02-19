@@ -1,10 +1,13 @@
 .main-chat
   .main-header
     .main-header__left-box
-      %p.main-header__left-box__current-group
-        techcamp
-      %p.main-header__left-box__member
-        Member:name
+      .main-header__left-box__current-group
+        %p= @group.name
+      .main-header__left-box__member
+        %ul
+          %li.li-name Member : 
+          - @group.users.each do |user|
+            %li.li-name= user.name
     = link_to edit_group_path(current_user),class: "main-header__edit-btn" do
       Edit
   .main-messages
