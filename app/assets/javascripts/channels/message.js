@@ -3,11 +3,11 @@ $(function(){
     e.preventDefault()
     var formData = new FormData(this);
     var url = $(this).attr('action')
-    $.ajex({
+    $.ajaparamsx({
       url: url,
       type: 'POST',
       data: formData,
-      datatype: 'json',
+      dataType: 'json',
       processData: false,
       contentType: false
     })
