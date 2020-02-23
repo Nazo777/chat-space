@@ -4,16 +4,16 @@ $(function(){
         if ( message.image ) {
           var html =
           `<div class="main-message">
-          <div class="main-message__up-user">
-            <p class="main-message__up-user__up-name">
-              ${message.user_name}
-            </p>
-            <p class="main-message__up-user__up-day">
-              ${message.created_at}
-            </p>
-          </div>
-            <img class="main-message__image" src=${message.image}>
-        </div>`
+            <div class="main-message__up-user">
+              <p class="main-message__up-user__up-name">
+                ${message.user_name}
+              </p>
+              <p class="main-message__up-user__up-day">
+                ${message.created_at}
+              </p>
+            </div>
+              <img class="main-message__image" src=${message.image}>
+          </div>`
           return html;
         } else {
           var html =
@@ -52,5 +52,8 @@ $(function(){
         $('.input-btn').prop( 'disabled', false );
         console.log(this);
       })
+      .fail(function() {
+        alert("メッセージ送信に失敗しました");
+    });
   });
 });
