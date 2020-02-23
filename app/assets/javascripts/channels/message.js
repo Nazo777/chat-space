@@ -47,7 +47,7 @@ $(function(){
     })
       .done(function(data){
         var html = buildHTML(data);
-        $('.main-messages').append(html);      
+        $('.main-messages').append(html).animate({ scrollTop: $('.main-messages')[0].scrollHeight});
         $('form')[0].reset();
         console.log(this);
       })
