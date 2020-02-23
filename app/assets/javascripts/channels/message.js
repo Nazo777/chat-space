@@ -49,6 +49,7 @@ $(function(){
         var html = buildHTML(data);
         $('.main-messages').append(html).animate({ scrollTop: $('.main-messages')[0].scrollHeight});
         $('form')[0].reset();
+        $('.input-btn').prop( 'disabled', false );
         console.log(this);
       })
   });
