@@ -50,7 +50,6 @@ $(function(){
         $('.main-messages').append(html).animate({ scrollTop: $('.main-messages')[0].scrollHeight});
         $('form')[0].reset();
         $('.input-btn').prop( 'disabled', false );
-        console.log(this);
       })
       .fail(function() {
         alert("メッセージ送信に失敗しました");
