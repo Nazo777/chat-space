@@ -17,6 +17,21 @@ $(function(){
     $("#user-search-result").append(html)
   }
 
+  function addDeleteUser(name, id) {
+    let html = `
+    <div class="chat-group-user clearfix" id="${id}">
+      <p class="chat-group-user__name">${name}</p>
+      <div class="user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn" data-user-id="${id}" data-user-name="${name}">削除</div>
+    </div>`;
+    $(".js-add-user").append(html);
+  }
+
+  function addMember(userid) {
+    let html = `
+    <input value="${userid}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userid}" />`;
+    $(`#${userid}`).append(html);
+  }
+
   $("#user-search-field").on("keyup", function(){
     var input = $("#user-search-field").val();
     $.ajax({
@@ -40,5 +55,16 @@ $(function(){
     .fail(function(){
       alert("ユーザー検索に失敗しました");
     });
-  })
+  });
+
+  $(document).on('click', ".user-search-add", function(){
+    const username = $(this).attr("data-user-name");
+    const userid   = $(this).attr("data-user-id");
+    $(this).parent().remove();
+    addDeleteUser(username, userid);
+    addMember(userid);
+  });
+  $(document).on('click',".user-search-remove",function(){
+    $(this).parent().remove();
+  });
 });
