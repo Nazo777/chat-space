@@ -12,6 +12,9 @@ $(function(){
                 ${message.created_at}
               </p>
             </div>
+              <p class="main-message__text">
+                ${message.text}
+              </p>
               <img class="main-message__image" src=${message.image}>
           </div>`
           return html;
